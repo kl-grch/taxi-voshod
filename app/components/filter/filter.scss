@@ -1,0 +1,48 @@
+.filter {
+  padding: 10px;
+  border: 0.5px dashed black;
+  border-radius: 12px;
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    .items {
+      &__item {
+        padding: 10px;
+        border-radius: 12px;
+        border: 1px solid black;
+        cursor: pointer;
+        .item {
+          &__select {
+            width: 100%;
+            border-radius: 12px;
+            padding: 5px;
+            optgroup {
+              option::before {
+                content: "- ";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__reset {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+      display: inline-block;
+      transform: rotate(45deg);
+      font-size: 2rem;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}
+
+select {
+  -webkit-appearance: none;
+}
